@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+    <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .hero {
+            background: url('code-1076536_1920.jpg') 
+            no-repeat center center/cover;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white; /* Ensure text is visible */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9); /* Text readability */
+        }
+        /* Grey overlay */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(128, 128, 128, 0.5); /* Grey with 50% opacity */
+            z-index: 1;
+        }
+
+        /* Ensures content is above the overlay */
+        .hero div {
+            position: relative;
+            z-index: 2;
+        }
+        .typing-text::after {
+            content: '|';
+            display: inline-block;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        .card {
+            transition: transform 0.3s ease-in-out;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        footer {
+            background: #343a40;
+            padding: 20px 0;
+            color: white;
+        }
+        .profile-img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 50%;
+            border: 5px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #about p {
+            text-align: justify;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .profile-img {
+                max-width: 180px;
+                margin-bottom: 15px;
+            }
+
+            #about .row {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Louie Steven Cadaguman</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div>
+            <h1 class="typing-text"></h1>
+            <p>Welcome to my portfolio website</p>
+        </div>
+    </section>
+    
+    <section id="about" class="container mt-5 text-center">
+        <h2>About Me</h2>
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="1658358746031.jpg" alt="Profile Picture" class="profile-img">
+            </div>
+            <div class="col-md-8">
+                <p>
+                    I am a passionate software developer with expertise in web development, databases, and machine learning.  
+                    With a background in PHP, JavaScript, Flutter, and Python, I build scalable and efficient applications  
+                    that solve real-world problems.  
+                </p>
+                <p>
+                    I have worked extensively with MySQL, Firebase, and TensorFlow, optimizing databases and deploying machine learning models  
+                    to enhance user experiences.  
+                </p>
+                <p>
+                    I am also skilled in embedded systems and IoT, particularly with Arduino and C++,  
+                    creating smart solutions for automation and monitoring. My passion for technology drives me  
+                    to continuously explore new frameworks and tools, ensuring that my solutions are both modern and efficient.  
+                </p>
+                <p>
+                    Beyond coding, I enjoy collaborating with teams, mentoring aspiring developers, and staying updated  
+                    with the latest trends in software development and AI.  
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container mt-5">
+        <h2>Projects</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal0">
+                        <img src="thesis.png" class="card-img-top" alt="Project 3">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">AI Assisted Medical Application Project (Python, Java Project)</h5>
+                        <p class="card-text">Used Neural Networks in deriving results of suggested specialist given symptoms written</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal1">
+                        <img src="Electronic Health Record.png" class="card-img-top" alt="Project 1">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Electronic Health Record (Flask Project)</h5>
+                        <p class="card-text">Developed for the Department of Health Western Visayas Center for Health Development.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal2">
+                        <img src="Smart Aquaponics System.jpg" class="card-img-top" alt="Project 2">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Smart Aquaponics System (Arduino, PHP Project)</h5>
+                        <p class="card-text">Prototype made for West Visayas State University.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal3">
+                        <img src="election system.png" class="card-img-top" alt="Project 3">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Election System (Laravel Project)</h5>
+                        <p class="card-text">Designed for the election of board members in hospitals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modals for image enlargements -->
+    <div class="modal fade" id="modal0" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal1Label">AI Assisted Medical Application Project (Python, Java Project)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="thesis.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal1Label">Electronic Health Record (Flask Project)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="Electronic Health Record.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal2Label">Smart Aquaponics System (Arduino, PHP Project)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="Smart Aquaponics System.jpg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal3Label">Election System (Laravel Project)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="election system.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <section id="skills" class="container mt-5 text-center">
+        <h2>Skills</h2>
+        <div class="row">
+            <div class="col-md-3 col-6">
+                <i class="fab fa-php fa-3x"></i>
+                <p>PHP & MySQL</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fab fa-js fa-3x"></i>
+                <p>JavaScript & jQuery</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fab fa-flutter fa-3x"></i>
+                <p>Flutter & Firebase</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fab fa-python fa-3x"></i>
+                <p>Python & TensorFlow</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fab fa-java fa-3x"></i>
+                <p>Java</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fa-solid fa-code fa-3x"></i>
+                <p>C++</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fa-solid fa-microchip fa-3x"></i>
+                <p>Arduino</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="contact" class="container mt-5">
+        <h2>Contact</h2>
+        <p>Email: lcadaguman399@gmail.com</p>
+        <p>Mobile Number: +63 908 867 3800</p>
+    </section>
+    
+    <footer class="text-center">
+        <p>&copy; 2025 Louie Steven Cadaguman. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        const text = "Hello, World!";
+        let index = 0;
+        function typeText() {
+            if (index < text.length) {
+                document.querySelector(".typing-text").textContent += text.charAt(index);
+                index++;
+                setTimeout(typeText, 100);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", typeText);
+    </script>
+</body>
+</html>
