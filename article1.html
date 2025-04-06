@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Article Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      padding-top: 80px;
+    }
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1030;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .article-header {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1516110833967-0b5716ca1387?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+      height: 40vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+    }
+
+    .article-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3); /* Greyish translucent effect */
+      z-index: 0; /* Ensure the overlay is behind the text */
+    }
+
+    .article-header > * {
+      position: relative; /* Ensure the text stays above the overlay */
+      z-index: 1; /* Text will be on top of the overlay */
+    }
+
+
+
+    .article-body p {
+      text-align: justify;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .author-box {
+      background: #ffffff;
+      padding: 20px;
+      border-left: 5px solid #0d6efd;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .related-posts .card {
+      transition: transform 0.3s ease;
+    }
+
+    .related-posts .card:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 30px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Louie Steven Cadaguman</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#articles">Articles</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Louie Steven Cadaguman</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="article.html">Article</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+  <!-- Header -->
+  <section class="article-header">
+    <div class="container">
+      <h1 class="display-4">Generated or Aided?
+      </h1>
+      <p class="lead">Let’s Talk About That Grey Area.</p>
+    </div>
+  </section>
+
+  <!-- Main Article Content -->
+  <main class="container my-5">
+    <div class="row">
+      <!-- Main article -->
+      <div class="col-lg-8 article-body">
+        <p><strong>Published:</strong> April 6, 2025 &nbsp; | &nbsp; <strong>Author:</strong> Louie Steven Cadaguman &nbsp; | &nbsp; <strong>Views:</strong> <span id="viewCount">0</span></p>
+        
+        <p>
+          In 2023, as a Beatle fan, when I heard that the band would be releasing a song dubbed as “the last Beatles song” through the aid of Artificial Intelligence, I was a bit skeptical simply because AI was mentioned in the process. But later, I found out how AI was actually used as explained in a documentary video for this song entitled “Now and Then”.<br><br>
+          
+          The production team simply isolated John Lennon’s vocals from the recorded demo through the AI-assisted machine. Despite the poor quality of the demo, they were able to have clear, isolated vocals from the recording made in the 70s.<br><br>
+          
+          In addition to this, also being an Eraserheads fan, I encountered an interview with Ely Buendia wherein he stated how he is not into AI writing songs, but he wished the AI track separator similar to that used by the Beatles could have existed back in the day and could have been very beneficial.<br><br>
+          
+          Being in this era of the existence of AI tools, most notably such as ChatGPT and DeepSeek, ethical considerations have been heavily debated—whether using AI is indeed beneficial, or could, to the greatest extent, “ruin” the human touch.<br><br>
+          
+          There have been talks that AI could displace the human workforce in favor of more efficient solutions. Copyright concerns also enter the scene with the presence of AI-generated media, like those Ghibli-inspired generated images.<br><br>
+          
+          So, let’s talk about that grey area.<br><br>
+          
+          AI-generated materials are indeed scary to say the least. To a certain extent, they could violate copyright claims, or eliminate the “soul” of certain media like images, audio, and literature, to name a few.<br><br>
+          
+          However, we could still seek aid or assistance through AI. Tools like the music track separator, plagiarism checkers for write-ups, and navigation through the usage of apps like Google Maps and Waze have made a huge impact on the way we live in a good way. In addition, these tools don’t necessarily need to be used with much dependence. That said, we could still use our own decision-making skills despite the presence of suggestions from these aiding tools.<br><br>
+          
+          For example, we could opt not to follow the entire directions given by Google Maps to reach our destination. We could still choose to use our own critical thinking skills in making decisions, to reach our destination even at a better time of arrival.<br><br>
+          
+          As a computer programmer, I could tell that these AI-aided tools are very much like how the existence of calculators did not displace mathematicians. Unlike calculators, AI may have a “mind of its own,” but even AI needs that human touch.<br><br>
+          
+          It still depends on how we use AI. If we become too reliant on it to generate things to the point that we lack critical thinking, there might indeed be a problem. But if we use it as a way to assist us for productivity and efficiency, and not be too dependent on it—as long as the human touch is still there—you will be fine.
+          </p>
+          
+          
+
+        <!-- <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget nisi eu purus commodo accumsan. Aenean sit amet diam in odio sagittis fermentum. Ut venenatis posuere purus, et commodo sapien fringilla non.
+        </p>
+
+        <blockquote class="blockquote my-4">
+          <p class="mb-0">"A great quote from the article or relevant expert goes here."</p>
+        </blockquote>
+
+        <p>
+          Vivamus a magna non metus fermentum dictum. Pellentesque vehicula felis a lectus porta, ut imperdiet erat condimentum.
+        </p> -->
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="author-box mb-4">
+          <h5>About the Author</h5>
+          <p>
+            Louie is a passionate software developer with experience in full-stack development, embedded systems, and machine learning. He writes about tech trends and innovation.
+          </p>
+        </div>
+
+        <!-- <div class="related-posts">
+          <h5>Related Articles</h5>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h6 class="card-title">Building Smart Systems with Arduino</h6>
+              <p class="card-text small text-muted">An introduction to IoT projects using C++ and microcontrollers.</p>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h6 class="card-title">How to Use TensorFlow in Your App</h6>
+              <p class="card-text small text-muted">A practical guide for developers working with machine learning.</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Contact -->
+  <section id="contact" class="container text-center mb-5">
+    <h4>Contact</h4>
+    <p>Email: lcadaguman399@gmail.com</p>
+    <p>Mobile: +63 908 867 3800</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 Louie Steven Cadaguman. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script> -->
+
+  <script type="module">
+    // Import Firebase functions
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
+    import { getFirestore, doc, onSnapshot, updateDoc, increment } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
+    // Your Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyB9zv_vaAlmVnvjaOuq5cH3ZcLpV7Ih8lU",
+      authDomain: "portfolio-2b2a3.firebaseapp.com",
+      projectId: "portfolio-2b2a3",
+      storageBucket: "portfolio-2b2a3.firebasestorage.app",
+      messagingSenderId: "936604464388",
+      appId: "1:936604464388:web:9cf7c06d6904d566c5cc51",
+      measurementId: "G-EXGM8B05BY"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+
+    // Reference to the 'views' document in Firestore
+    const viewsRef = doc(db, 'articleViews', 'article1'); // 'article1' is the document ID
+
+    // Real-time listener for views
+    onSnapshot(viewsRef, (docSnapshot) => {
+      if (docSnapshot.exists()) {
+        const data = docSnapshot.data();
+        document.getElementById('viewCount').innerText = `${data.views}`;
+      }
+    });
+
+    // Increment view count
+    function incrementView() {
+      updateDoc(viewsRef, {
+        views: increment(1) // Increment the view count
+      });
+    }
+
+    // Call incrementView on page load
+    window.onload = function() {
+      incrementView();
+    };
+  </script>
+</body>
+</html>
